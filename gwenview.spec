@@ -1,12 +1,12 @@
 Name: gwenview
 Summary: Fast and easy to use image viewer for KDE
-Version: 4.8.1
+Version: 4.8.2
 Release: 1
 Epoch: 2
 Group: Graphical desktop/KDE
 License: GPLv2
 URL: http://www.kde.org
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
+Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.xz
 BuildRequires: kdebase4-devel >= 1:%version
 BuildRequires: libexiv-devel
 BuildRequires: libkipi-devel >= 2:%version
