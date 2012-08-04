@@ -1,12 +1,12 @@
 Name:		gwenview
 Summary:	Fast and easy to use image viewer for KDE
-Version:	4.8.97
-Release:	2
+Version: 4.9.0
+Release: 1
 Epoch:		2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://www.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		gwenview-4.8.3-drop-inode-directory.patch
 BuildRequires:	kdebase4-devel
 BuildRequires:	pkgconfig(exiv2)
