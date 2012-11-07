@@ -1,6 +1,6 @@
 Name:		gwenview
 Summary:	Fast and easy to use image viewer for KDE
-Version: 4.9.2
+Version: 4.9.3
 Release: 1
 Epoch:		2
 Group:		Graphical desktop/KDE
