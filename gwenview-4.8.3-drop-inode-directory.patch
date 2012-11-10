@@ -1,0 +1,12 @@
+diff -urN gwenview-4.8.3.orig/app/gwenview.desktop gwenview-4.8.3/app/gwenview.desktop
+--- gwenview-4.8.3.orig/app/gwenview.desktop	2012-05-25 13:16:48.721581380 +0400
++++ gwenview-4.8.3/app/gwenview.desktop	2012-05-25 13:17:01.858574262 +0400
+@@ -198,7 +198,7 @@
+ Icon=gwenview
+ Type=Application
+ Categories=Qt;KDE;Graphics;Viewer;Photography;
+-MimeType=inode/directory;image/gif;image/jpeg;image/png;image/bmp;image/x-eps;image/x-ico;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-xbitmap;image/x-xpixmap;
++MimeType=image/gif;image/jpeg;image/png;image/bmp;image/x-eps;image/x-ico;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-xbitmap;image/x-xpixmap;
+ X-DocPath=gwenview/index.html
+ # InitialPreference should be greater than Okular so that Gwenview is the
+ # primary application associated with images, but less than Konqueror or Dolphin
