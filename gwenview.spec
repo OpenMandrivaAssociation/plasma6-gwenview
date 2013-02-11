@@ -7,7 +7,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://www.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		gwenview-4.8.3-drop-inode-directory.patch
+Patch0:		gwenview-4.10.0-drop-inode-directory.patch
 BuildRequires:	kdebase4-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
@@ -91,6 +91,7 @@ based on %{name}.
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.0-1
 - New version 4.10.0
 - Add pkgconfig(lcms2) and pkgconfig(libkactivities) to BuildRequires
+- Re-diff patch for desktop file
 
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.9.4-1
 - New version 4.9.4
