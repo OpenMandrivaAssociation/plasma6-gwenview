@@ -1,7 +1,7 @@
 Name:		gwenview
 Summary:	Fast and easy to use image viewer for KDE
 Version:	4.10.2
-Release:	3
+Release:	4
 Epoch:		2
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -9,6 +9,9 @@ URL:		http://www.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
 Patch0:		gwenview-4.10.1-mimetypes.patch
+# Revert https://projects.kde.org/projects/kde/kdegraphics/gwenview/repository/revisions/fe4b195b2023aeae92a58188a4578c1c6b08db86
+# because it breaks image rotation
+Patch1:		gwenview-4.10.2-fix-rotate.patch
 BuildRequires:	kdebase4-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
@@ -80,6 +83,7 @@ based on %{name}.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake_kde4
@@ -89,6 +93,9 @@ based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Mon May 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.2-4
+- Add patch to fix image rotation which was broken in 4.10
+
 * Mon Apr 22 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.2-3
 - Update supported mimetypes (add image/svg+xml-compressed)
 
