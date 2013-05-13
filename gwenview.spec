@@ -1,11 +1,11 @@
-Name:		gwenview
 Summary:	Fast and easy to use image viewer for KDE
-Version:	4.10.3
-Release:	2
+Name:		gwenview
 Epoch:		2
+Version:	4.10.3
+Release:	3
 Group:		Graphical desktop/KDE
 License:	GPLv2
-URL:		http://www.kde.org
+Url:		http://www.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
 Patch0:		gwenview-4.10.1-mimetypes.patch
@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libkactivities)
 BuildRequires:	pkgconfig(libkipi)
 Requires:	kipi-common
+Obsoletes:	%{name}-devel < 2:4.10.3-3
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.
@@ -55,28 +56,17 @@ KIPI image framework.
 %package -n %{libgwenviewlib}
 Summary:	Gwenview library
 Group:		System/Libraries
+# liblcms2.so.2 is provided by LibreOffice package by mistake in Main Release
+#so make sure proper liblcms2_2 package is installed in Rosa 2012.1
+%if %{mdvver} == 201210
+Requires:	%{_lib}lcms2_2
+%endif
 
 %description -n %{libgwenviewlib}
 Gwenview library.
 
 %files -n %{libgwenviewlib}
 %{_kde_libdir}/libgwenviewlib.so.%{gwenviewlib_major}*
-
-#-----------------------------------------------------------------------------
-
-%package devel
-Summary:	Devel stuff for %{name}
-Group:		Development/KDE and Qt
-Requires:	%{libgwenviewlib} = %{EVRD}
-Requires:	pkgconfig(libkipi)
-Conflicts:	kdegraphics4-devel < 2:4.6.90
-
-%description devel
-This package contains header files needed if you wish to build applications
-based on %{name}.
-
-%files devel
-%{_kde_libdir}/libgwenviewlib.so
 
 #----------------------------------------------------------------------
 
@@ -92,7 +82,15 @@ based on %{name}.
 %install
 %makeinstall_std -C build
 
+# We don't need this as we don't have any devel headers
+rm -f %{buildroot}%{_kde_libdir}/libgwenviewlib.so
+
 %changelog
+* Mon May 13 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.3-3
+- Drop devel package because it's useless here and was just wrong
+- Minor spec cleanup
+- Add explicit Requires on liblcms2_2 for Rosa 2012.1 backport
+
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.3-1
 - New version 4.10.3
 
