@@ -2,7 +2,7 @@ Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
 Version:	4.10.5
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://www.kde.org
@@ -10,10 +10,14 @@ Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
 Patch0:		gwenview-4.10.1-mimetypes.patch
 BuildRequires:	kdebase4-devel
+BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libkactivities)
 BuildRequires:	pkgconfig(libkipi)
+BuildRequires:	pkgconfig(libpng)
+BuildRequires:	pkgconfig(shared-desktop-ontologies)
+BuildRequires:	pkgconfig(zlib)
 Requires:	kipi-common
 Obsoletes:	%{name}-devel < 2:4.10.3-3
 
@@ -82,6 +86,9 @@ Gwenview library.
 rm -f %{buildroot}%{_kde_libdir}/libgwenviewlib.so
 
 %changelog
+* Fri Jul 19 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.5-2
+- Update BuildRequires
+
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.5-1
 - New version 4.10.5
 
