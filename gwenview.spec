@@ -4,11 +4,11 @@ Epoch:		2
 Version:	4.11.0
 Release:	1
 Group:		Graphical desktop/KDE
-License:	GPLv2
+License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
-Patch0:		gwenview-4.10.1-mimetypes.patch
+Patch0:		gwenview-4.11.0-mimetypes.patch
 BuildRequires:	kdebase4-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
@@ -88,6 +88,7 @@ rm -f %{buildroot}%{_kde_libdir}/libgwenviewlib.so
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.11.0-1
 - New version 4.11.0
+- Re-diff mimetypes patch
 
 * Fri Jul 19 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.10.5-2
 - Update BuildRequires
