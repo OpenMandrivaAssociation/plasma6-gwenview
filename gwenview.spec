@@ -1,7 +1,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	4.12.2
+Version:	4.12.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -86,6 +86,9 @@ Gwenview library.
 rm -f %{buildroot}%{_kde_libdir}/libgwenviewlib.so
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.12.3-1
+- New version 4.12.3
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.12.2-1
 - New version 4.12.2
 
