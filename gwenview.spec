@@ -14,6 +14,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libkactivities)
+BuildRequires:	pkgconfig(libkdcraw)
 BuildRequires:	pkgconfig(libkipi)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(shared-desktop-ontologies)
@@ -88,6 +89,7 @@ rm -f %{buildroot}%{_kde_libdir}/libgwenviewlib.so
 %changelog
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.13.2-1
 - New version 4.13.2
+- Add pkgconfig(libkdcraw) to BuildRequires
 
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 2:4.12.4-1
 - New version 4.12.4
