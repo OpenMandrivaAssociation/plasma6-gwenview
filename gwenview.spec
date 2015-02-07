@@ -1,12 +1,14 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	14.12.0
+Version:	14.12.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
 Patch0:		gwenview-4.11.0-mimetypes.patch
 BuildRequires:	extra-cmake-modules5
