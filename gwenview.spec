@@ -8,12 +8,10 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 # Drop inode/directory, add image/svg+xml and image/svg+xml-compressed
 Patch0:		gwenview-4.11.0-mimetypes.patch
-BuildRequires:	extra-cmake-modules5
-BuildRequires:	cmake
-BuildRequires:	ninja
+BuildRequires:	cmake(ECM)
 BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
@@ -80,14 +78,13 @@ Gwenview library.
 
 %prep
 %setup -q
-%patch0 -p1
 %cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja -C build install
+%ninja_install -C build
 
 # We don't need this as we don't have any devel headers
 rm -f %{buildroot}%{_libdir}/libgwenviewlib.so
