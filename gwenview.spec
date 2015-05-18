@@ -23,8 +23,8 @@ BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Activities)
-Requires:	kipi-common
-Obsoletes:	%{name}-devel < 2:4.10.3-3
+Requires:		kipi-common
+Obsoletes:		%{name}-devel < 2:4.10.3-3
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.
@@ -42,8 +42,8 @@ KIPI image framework.
 %files
 %doc %{_docdir}/HTML/en/gwenview/
 %{_bindir}/gwenview
-%{_datadir}/applications/gwenview.desktop
 %{_libdir}/qt5/plugins/gvpart.so
+%{_datadir}/applications/*gwenview.desktop
 %{_datadir}/appdata/gwenview.appdata.xml
 %{_datadir}/gvpart
 %{_datadir}/gwenview
@@ -61,11 +61,6 @@ KIPI image framework.
 %package -n %{libgwenviewlib}
 Summary:	Gwenview library
 Group:		System/Libraries
-# liblcms2.so.2 is provided by LibreOffice package by mistake in Main Release
-#so make sure proper liblcms2_2 package is installed in Rosa 2012.1
-%if %{mdvver} == 201210
-Requires:	%{_lib}lcms2_2
-%endif
 
 %description -n %{libgwenviewlib}
 Gwenview library.
