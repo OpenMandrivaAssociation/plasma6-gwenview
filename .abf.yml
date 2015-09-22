@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   gwenview-15.08.0.tar.xz: 5cc093e2580e7e1c88de7774e7674c2f1b73669d
+sources:
+  gwenview-15.08.1.tar.xz: 31efb06b4d328561d58929e64df8cf008f1194ae
