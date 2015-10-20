@@ -21,10 +21,12 @@ BuildRequires:	pkgconfig(libkipi)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(Qt5Test)
+BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Activities)
-Requires:		kipi-common
-Obsoletes:		%{name}-devel < 2:4.10.3-3
+Requires:	kipi-common
+Obsoletes:	%{name}-devel < 2:4.10.3-3
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.
@@ -48,7 +50,7 @@ KIPI image framework.
 %{_datadir}/gwenview
 %{_datadir}/kservices5/gvpart.desktop
 %{_datadir}/kservices5/ServiceMenus/slideshow.desktop
-%{_datadir}/kxmlgui5/gwenview
+%{_datadir}/kxmlgui5/org.kde.gwenview
 %{_datadir}/kxmlgui5/gvpart
 %{_iconsdir}/*/*/*/gwenview*
 %{_iconsdir}/*/*/*/document-share*
