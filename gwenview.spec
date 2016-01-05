@@ -15,9 +15,6 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
-BuildRequires:	pkgconfig(libkactivities)
-BuildRequires:	pkgconfig(libkdcraw)
-BuildRequires:	pkgconfig(libkipi)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(zlib)
@@ -25,6 +22,8 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	cmake(KF5Baloo)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Activities)
+BuildRequires:	cmake(KF5KDcraw)
+BuildRequires:	cmake(KF5Kipi)
 Requires:	kipi-common
 Obsoletes:	%{name}-devel < 2:4.10.3-3
 
@@ -46,7 +45,7 @@ KIPI image framework.
 %{_bindir}/gwenview
 %{_libdir}/qt5/plugins/gvpart.so
 %{_datadir}/applications/*gwenview.desktop
-%{_datadir}/appdata/gwenview.appdata.xml
+%{_datadir}/appdata/org.kde.gwenview.appdata.xml
 %{_datadir}/gwenview
 %{_datadir}/kservices5/gvpart.desktop
 %{_datadir}/kservices5/ServiceMenus/slideshow.desktop
