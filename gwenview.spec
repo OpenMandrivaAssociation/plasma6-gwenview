@@ -18,13 +18,23 @@ BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Svg)
+BuildRequires:	pkgconfig(Qt5OpenGL)
+BuildRequires:	pkgconfig(Qt5Concurrent)
+BuildRequires:	pkgconfig(Qt5X11Extras)
 BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	cmake(KF5Baloo)
+BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5KDcraw)
 BuildRequires:	cmake(KF5Kipi)
+BuildRequires:	cmake(Phonon4Qt5)
 Requires:	kipi-common
+Requires:	kinit
+Requires:	kio-extras
 Obsoletes:	%{name}-devel < 2:4.10.3-3
 
 %description
