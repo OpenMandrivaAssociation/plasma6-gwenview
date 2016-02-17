@@ -3,8 +3,8 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	15.12.1
-Release:	2
+Version:	15.12.2
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
