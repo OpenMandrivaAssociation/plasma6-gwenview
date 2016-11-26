@@ -56,7 +56,7 @@ KIPI image framework.
 %{_bindir}/gwenview
 %{_libdir}/qt5/plugins/gvpart.so
 %{_datadir}/applications/*gwenview.desktop
-%{_datadir}/appdata/org.kde.gwenview.appdata.xml
+%{_datadir}/metainfo/org.kde.gwenview.appdata.xml
 %{_datadir}/gwenview
 %{_datadir}/kservices5/gvpart.desktop
 %{_datadir}/kservices5/ServiceMenus/slideshow.desktop
