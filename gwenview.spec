@@ -3,7 +3,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -51,8 +51,7 @@ Konqueror. Additional features, such as image renaming, comparing,
 converting, and batch processing, HTML gallery and others are provided by the
 KIPI image framework.
 
-%files
-%doc %{_docdir}/HTML/en/gwenview/
+%files -f gwenview.lang
 %{_bindir}/gwenview
 %{_bindir}/gwenview_importer
 %{_libdir}/qt5/plugins/gvpart.so
@@ -66,6 +65,16 @@ KIPI image framework.
 %{_datadir}/solid/actions/gwenview*.desktop
 %{_iconsdir}/*/*/*/gwenview*
 %{_iconsdir}/*/*/*/document-share*
+%doc %{_docdir}/HTML/en/gwenview/
+%lang(ca) %doc %{_docdir}/HTML/ca/gwenview
+%lang(de) %doc %{_docdir}/HTML/de/gwenview
+%lang(es) %doc %{_docdir}/HTML/es/gwenview
+%lang(it) %doc %{_docdir}/HTML/it/gwenview
+%lang(nl) %doc %{_docdir}/HTML/nl/gwenview
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/gwenview
+%lang(sr) %doc %{_docdir}/HTML/sr/gwenview
+%lang(sv) %doc %{_docdir}/HTML/sv/gwenview
+%lang(uk) %doc %{_docdir}/HTML/uk/gwenview
 
 #------------------------------------------------
 
@@ -97,3 +106,5 @@ Gwenview library.
 
 # We don't need this as we don't have any devel headers
 rm -f %{buildroot}%{_libdir}/libgwenviewlib.so
+
+%find_lang gwenview
