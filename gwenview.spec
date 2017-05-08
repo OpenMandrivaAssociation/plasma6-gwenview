@@ -32,7 +32,6 @@ BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5KDcraw)
 BuildRequires:	cmake(KF5Kipi)
 BuildRequires:	cmake(Phonon4Qt5)
-BuildRequires:	cmake(KF5Kipi)
 Requires:	kipi-common
 Requires:	kinit
 Requires:	kio-extras
