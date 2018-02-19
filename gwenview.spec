@@ -3,7 +3,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	17.04.0
+Version:	 17.12.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -59,21 +59,10 @@ KIPI image framework.
 %{_datadir}/gwenview
 %{_datadir}/kservices5/gvpart.desktop
 %{_datadir}/kservices5/ServiceMenus/slideshow.desktop
-%{_datadir}/kxmlgui5/gwenview
 %{_datadir}/kxmlgui5/gvpart
 %{_datadir}/solid/actions/gwenview*.desktop
 %{_iconsdir}/*/*/*/gwenview*
 %{_iconsdir}/*/*/*/document-share*
-%doc %{_docdir}/HTML/en/gwenview/
-%lang(ca) %doc %{_docdir}/HTML/ca/gwenview
-%lang(de) %doc %{_docdir}/HTML/de/gwenview
-%lang(es) %doc %{_docdir}/HTML/es/gwenview
-%lang(it) %doc %{_docdir}/HTML/it/gwenview
-%lang(nl) %doc %{_docdir}/HTML/nl/gwenview
-%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/gwenview
-%lang(sr) %doc %{_docdir}/HTML/sr/gwenview
-%lang(sv) %doc %{_docdir}/HTML/sv/gwenview
-%lang(uk) %doc %{_docdir}/HTML/uk/gwenview
 
 #------------------------------------------------
 
@@ -106,4 +95,4 @@ Gwenview library.
 # We don't need this as we don't have any devel headers
 rm -f %{buildroot}%{_libdir}/libgwenviewlib.so
 
-%find_lang gwenview
+%find_lang gwenview --all-name --with-html
