@@ -3,7 +3,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
 Epoch:		2
-Version:	 18.04.3
+Version:	 18.07.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -57,6 +57,7 @@ KIPI image framework.
 %{_datadir}/applications/*gwenview.desktop
 %{_datadir}/metainfo/org.kde.gwenview.appdata.xml
 %{_datadir}/kconf_update/gwenview.upd
+%{_datadir}/kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
 %{_datadir}/gwenview
 %{_datadir}/kservices5/gvpart.desktop
 %{_datadir}/kservices5/ServiceMenus/slideshow.desktop
