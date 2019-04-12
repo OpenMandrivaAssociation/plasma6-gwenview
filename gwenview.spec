@@ -2,14 +2,12 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Epoch:		2
-Version:	18.12.3
-Release:	2
+Version:	19.04.0
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		gwenview-18.12.0-exiv2-0.27.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
