@@ -2,8 +2,9 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
+Epoch:		2
 Version:	19.04.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
