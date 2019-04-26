@@ -2,9 +2,8 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Epoch:		2
 Version:	19.04.0
-Release:	2
+Release:	3
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -34,6 +33,7 @@ Requires:	kipi-common
 Requires:	kinit
 Requires:	kio-extras
 Obsoletes:	%{name}-devel < 2:4.10.3-3
+Obsoletes:	%{name} < 2:19.04.0-3
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.
@@ -72,6 +72,7 @@ KIPI image framework.
 %package -n %{libgwenviewlib}
 Summary:	Gwenview library
 Group:		System/Libraries
+Obsoletes:	%{mklibname gwenviewlib 5} < 2:19.04.0-3
 
 %description -n %{libgwenviewlib}
 Gwenview library.
