@@ -13,7 +13,6 @@ BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libpng)
-BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
