@@ -8,6 +8,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		gwenview-20.03.90-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(exiv2)

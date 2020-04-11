@@ -1,0 +1,15 @@
+diff -up gwenview-20.03.90/lib/crop/cropwidget.cpp.omv~ gwenview-20.03.90/lib/crop/cropwidget.cpp
+--- gwenview-20.03.90/lib/crop/cropwidget.cpp.omv~	2020-04-11 22:45:28.211817285 +0200
++++ gwenview-20.03.90/lib/crop/cropwidget.cpp	2020-04-11 22:45:35.369898674 +0200
+@@ -409,11 +409,7 @@ CropWidget::CropWidget(QWidget* parent,
+     // Index Changed: required so that choosing an item with the same text is detected (e.g. going from US Letter portrait
+     // to US Letter landscape)
+     connect(d->ratioComboBox, &QComboBox::editTextChanged, this, &CropWidget::slotRatioComboBoxChanged);
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+     connect(d->ratioComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CropWidget::slotRatioComboBoxChanged);
+-#else
+-    connect(d->ratioComboBox, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, &CropWidget::slotRatioComboBoxChanged);
+-#endif
+ 
+     // Don't do this before signals are connected, otherwise the tool won't get
+     // initialized
