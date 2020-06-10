@@ -2,7 +2,7 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Version:	20.04.1
+Version:	20.04.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
