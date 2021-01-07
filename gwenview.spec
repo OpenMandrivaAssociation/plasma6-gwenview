@@ -9,11 +9,12 @@ License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	jpeg-devel
+BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Svg)
@@ -27,6 +28,7 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Activities)
 BuildRequires:	cmake(KF5KDcraw)
 BuildRequires:	cmake(KF5Kipi)
+BuildRequires:	cmake(KF5Purpose)
 BuildRequires:	cmake(Phonon4Qt5)
 Requires:	kipi-common
 Requires:	kinit
