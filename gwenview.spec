@@ -2,7 +2,7 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -54,6 +54,7 @@ KIPI image framework.
 %{_bindir}/gwenview
 %{_bindir}/gwenview_importer
 %{_datadir}/applications/*gwenview.desktop
+%{_datadir}/applications/org.kde.gwenview_importer.desktop
 %{_datadir}/metainfo/org.kde.gwenview.appdata.xml
 %{_datadir}/kconf_update/gwenview.upd
 %{_datadir}/kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
