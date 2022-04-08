@@ -2,7 +2,7 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Version:	22.03.80
+Version:	22.03.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
