@@ -2,7 +2,7 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Version:	22.04.3
+Version:	22.07.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -31,6 +31,7 @@ BuildRequires:	cmake(KF5KDcraw)
 BuildRequires:	cmake(KF5Kipi)
 BuildRequires:	cmake(KF5Purpose)
 BuildRequires:	cmake(Phonon4Qt5)
+BuildRequires:	cmake(kImageAnnotator)
 Requires:	kipi-common
 Requires:	kinit
 Requires:	kio-extras
