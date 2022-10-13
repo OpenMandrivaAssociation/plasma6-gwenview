@@ -2,13 +2,12 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		gwenview
-Version:	22.08.1
+Version:	22.08.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		gwenview-20.12.3-avif-jxl.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(exiv2)
