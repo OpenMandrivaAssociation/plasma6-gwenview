@@ -31,6 +31,7 @@ BuildRequires:	cmake(KF5Kipi)
 BuildRequires:	cmake(KF5Purpose)
 BuildRequires:	cmake(Phonon4Qt5)
 BuildRequires:	cmake(kImageAnnotator)
+BuildRequires:	cmake(WaylandProtocols)
 Requires:	kipi-common
 Requires:	kinit
 Requires:	kio-extras
