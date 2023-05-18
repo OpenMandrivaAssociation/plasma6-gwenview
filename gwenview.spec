@@ -8,6 +8,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		gwenview-23.04.1-exiv2-0.28.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(exiv2)
