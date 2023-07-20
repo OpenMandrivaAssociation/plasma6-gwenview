@@ -2,7 +2,7 @@
 %define git 20230720
 
 Summary:	Fast and easy to use image viewer for KDE
-Name:		gwenview
+Name:		plasma6-gwenview
 Version:	23.07.90
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
@@ -79,7 +79,7 @@ KIPI image framework.
 #------------------------------------------------
 
 %define gwenviewlib_major 5
-%define libgwenviewlib %mklibname gwenviewlib %{gwenviewlib_major}
+%define libgwenviewlib %mklibname kf6gwenviewlib %{gwenviewlib_major}
 
 %package -n %{libgwenviewlib}
 Summary:	Gwenview library
