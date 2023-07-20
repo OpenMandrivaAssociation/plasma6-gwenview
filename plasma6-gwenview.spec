@@ -35,6 +35,7 @@ BuildRequires:	cmake(Phonon4Qt6)
 BuildRequires:	cmake(kImageAnnotator)
 BuildRequires:	cmake(WaylandProtocols)
 BuildRequires:	pkgconfig(wayland-protocols)
+BuildRequires:	plasma6-xdg-desktop-portal-kde
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.
