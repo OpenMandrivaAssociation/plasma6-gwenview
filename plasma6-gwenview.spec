@@ -4,7 +4,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
 Version:	23.07.90
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -84,7 +84,6 @@ KIPI image framework.
 %package -n %{libgwenviewlib}
 Summary:	Gwenview library
 Group:		System/Libraries
-Obsoletes:	%{mklibname gwenviewlib 5} < 2:19.04.0-3
 
 %description -n %{libgwenviewlib}
 Gwenview library.
