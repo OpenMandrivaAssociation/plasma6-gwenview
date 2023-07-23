@@ -1,10 +1,10 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230720
+%define git 20230723
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
 Version:	23.07.90
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
