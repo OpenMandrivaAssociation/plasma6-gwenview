@@ -1,5 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20230723
+%define git 20230724
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
@@ -75,22 +75,7 @@ KIPI image framework.
 %{_iconsdir}/*/*/*/document-share*
 %{_qtdir}/plugins/kf6/kfileitemaction/slideshowfileitemaction.so
 %{_qtdir}/plugins/kf6/parts/gvpart.so
-
-#------------------------------------------------
-
-%define gwenviewlib_major 5
-%define libgwenviewlib %mklibname kf6gwenviewlib %{gwenviewlib_major}
-
-%package -n %{libgwenviewlib}
-Summary:	Gwenview library
-Group:		System/Libraries
-
-%description -n %{libgwenviewlib}
-Gwenview library.
-
-%files -n %{libgwenviewlib}
-%{_libdir}/libgwenviewlib.so.%{gwenviewlib_major}*
-%{_libdir}/libgwenviewlib.so.4.97*
+%{_libdir}/libgwenviewlib.so*
 
 #----------------------------------------------------------------------
 
@@ -108,8 +93,5 @@ Gwenview library.
 
 %install
 %ninja_install -C build
-
-# We don't need this as we don't have any devel headers
-rm -f %{buildroot}%{_libdir}/libgwenviewlib.so
 
 %find_lang gwenview --all-name --with-html
