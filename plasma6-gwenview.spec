@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231104
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+#define git 20231104
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
-Version:	23.07.90
+Version:	24.01.75
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -11,7 +11,7 @@ Url:		http://www.kde.org
 %if 0%{?git}
 Source0:	https://invent.kde.org/graphics/gwenview/-/archive/master/gwenview-master.tar.bz2#/gwenview-%{git}.tar.bz2
 %else
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/gwenview-%{version}.tar.xz
 %endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(libjpeg)
@@ -40,7 +40,7 @@ BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Purpose)
 BuildRequires:	%mklibname -d KF6IconWidgets
-BuildRequires:	cmake(KF6KDcraw)
+BuildRequires:	cmake(KDcrawQt6)
 BuildRequires:	cmake(Phonon4Qt6)
 BuildRequires:	cmake(kImageAnnotator)
 BuildRequires:	cmake(WaylandProtocols)
