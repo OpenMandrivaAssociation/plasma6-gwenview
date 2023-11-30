@@ -3,7 +3,7 @@
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
-Version:	24.01.75
+Version:	24.01.80
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -33,7 +33,7 @@ BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	cmake(Qt6SvgWidgets)
 BuildRequires:	cmake(KF6Baloo)
 BuildRequires:	cmake(KF6KIO)
-BuildRequires:	cmake(KF6Activities)
+BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6ItemModels)
 BuildRequires:	cmake(KF6Notifications)
@@ -66,8 +66,6 @@ KIPI image framework.
 %{_datadir}/applications/*gwenview.desktop
 %{_datadir}/applications/org.kde.gwenview_importer.desktop
 %{_datadir}/metainfo/org.kde.gwenview.appdata.xml
-%{_datadir}/kconf_update/gwenview.upd
-%{_datadir}/kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
 %{_datadir}/gwenview
 %{_datadir}/solid/actions/gwenview*.desktop
 %{_datadir}/qlogging-categories6/gwenview.categories
