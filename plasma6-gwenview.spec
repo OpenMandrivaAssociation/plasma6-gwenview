@@ -1,15 +1,17 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-#define git 20231104
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
-Version:	24.01.95
+Version:	24.01.96
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
 %if 0%{?git}
-Source0:	https://invent.kde.org/graphics/gwenview/-/archive/master/gwenview-master.tar.bz2#/gwenview-%{git}.tar.bz2
+Source0:	https://invent.kde.org/graphics/gwenview/-/archive/%{gitbranch}/gwenview-%{gitbranchd}.tar.bz2#/gwenview-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/gwenview-%{version}.tar.xz
 %endif
@@ -78,7 +80,7 @@ KIPI image framework.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n gwenview-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n gwenview-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
