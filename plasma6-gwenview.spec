@@ -1,11 +1,11 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-%define git 20240217
+#define git 20240217
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
-Version:	24.01.96
+Version:	24.02.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -44,8 +44,8 @@ BuildRequires:	cmake(KF6Purpose)
 BuildRequires:	%mklibname -d KF6IconWidgets
 BuildRequires:	cmake(KDcrawQt6)
 BuildRequires:	cmake(Phonon4Qt6)
-BuildRequires:	cmake(kImageAnnotator)
 BuildRequires:	cmake(WaylandProtocols)
+BuildRequires:	cmake(kImageAnnotator-Qt6)
 BuildRequires:	pkgconfig(wayland-protocols)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 
