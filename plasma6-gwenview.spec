@@ -46,6 +46,7 @@ BuildRequires:	cmake(KDcrawQt6)
 BuildRequires:	cmake(Phonon4Qt6)
 BuildRequires:	cmake(WaylandProtocols)
 BuildRequires:	cmake(kImageAnnotator-Qt6)
+BuildRequires:	cmake(kColorPicker-Qt6)
 BuildRequires:	pkgconfig(wayland-protocols)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 
