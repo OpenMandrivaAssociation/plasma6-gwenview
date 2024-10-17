@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %if 0%{?git}
 Source0:	https://invent.kde.org/graphics/gwenview/-/archive/%{gitbranch}/gwenview-%{gitbranchd}.tar.bz2#/gwenview-%{git}.tar.bz2
 %else
