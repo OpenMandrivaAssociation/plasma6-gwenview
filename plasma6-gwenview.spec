@@ -6,7 +6,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://www.kde.org
@@ -52,6 +52,9 @@ BuildRequires:	cmake(kColorPicker-Qt6)
 BuildRequires:	pkgconfig(wayland-protocols)
 BuildRequires:	pkgconfig(wayland-client)
 BuildRequires:	plasma6-xdg-desktop-portal-kde
+
+%patchlist
+gwenview-wayland-egl-is-wayland.patch
 
 %description
 Gwenview is a fast and easy to use image viewer/browser for KDE.

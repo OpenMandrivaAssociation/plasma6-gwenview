@@ -1,0 +1,12 @@
+diff -up gwenview-24.12.3/lib/documentview/documentview.cpp.omv~ gwenview-24.12.3/lib/documentview/documentview.cpp
+--- gwenview-24.12.3/lib/documentview/documentview.cpp.omv~	2025-03-14 02:36:29.608609435 +0100
++++ gwenview-24.12.3/lib/documentview/documentview.cpp	2025-03-14 02:36:41.345335196 +0100
+@@ -460,7 +460,7 @@ DocumentView::DocumentView(QGraphicsScen
+     d->mDrag = nullptr;
+ 
+ #ifndef GWENVIEW_NO_WAYLAND_GESTURES
+-    if (QApplication::platformName() == QStringLiteral("wayland")) {
++    if (QApplication::platformName().startsWith(QStringLiteral("wayland"))) {
+         d->mWaylandGestures = new WaylandGestures();
+         connect(d->mWaylandGestures, &WaylandGestures::pinchGestureStarted, [this]() {
+             d->mWaylandGestures->setStartZoom(zoom());
