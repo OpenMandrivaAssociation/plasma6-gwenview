@@ -6,7 +6,7 @@
 Summary:	Fast and easy to use image viewer for KDE
 Name:		plasma6-gwenview
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://www.kde.org
