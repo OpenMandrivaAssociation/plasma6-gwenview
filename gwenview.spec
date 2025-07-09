@@ -4,7 +4,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Fast and easy to use image viewer for KDE
-Name:		plasma6-gwenview
+Name:		gwenview
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
